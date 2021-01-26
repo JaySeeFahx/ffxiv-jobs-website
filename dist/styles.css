@@ -1,9 +1,12 @@
 /* Global Styles */
 
-/* Video Styles */
-.video {
-  width: 100%;
-  height: auto;
-}
+/* Nav Styles */
 
 /* List Styles */
+
+/* Media Queries */
+@media screen and (max-width: 380px) {
+  .hide {
+    display: none;
+  }
+}
