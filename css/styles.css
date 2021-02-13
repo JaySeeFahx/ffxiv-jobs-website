@@ -29,6 +29,11 @@ ul {
   list-style-type: none;
 }
 
+ul img {
+  width: 30px;
+  height: auto;
+}
+
 /* Media Queries - Mobile First*/
 
 /* Tablet Display */
