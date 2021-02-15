@@ -38,6 +38,7 @@ ul img {
   height: auto;
 }
 
+/* Form Styles */
 form {
   margin-bottom: 15px;
 }
@@ -63,10 +64,16 @@ label {
   margin-bottom: 0.5em;
 }
 
+input[type="submit"],
+select[name="job"] {
+  cursor: pointer;
+  background-color: #e8eeef;
+}
+
 /* Media Queries - Mobile First*/
 
 /* Tablet Display */
-@media screen and (min-width: 401px, max-width: 800px) {
+@media screen and (min-width: 401px) and (max-width: 800px) {
 }
 
 /* Desktop Display */
