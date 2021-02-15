@@ -1,4 +1,7 @@
 /* Global Styles */
+* {
+  box-sizing: border-box;
+}
 body,
 .main-header p {
   background: black;
@@ -6,6 +9,7 @@ body,
   padding: 0;
   margin: 10px;
   text-align: center;
+  font-size: 1.2em;
 }
 
 p {
@@ -32,6 +36,31 @@ ul {
 ul img {
   width: 30px;
   height: auto;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+input {
+  font-size: 1em;
+  color: black;
+  font-weight: 300;
+  width: 90%;
+  border: none;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  outline: 0;
+  margin-bottom: 1.2em;
+  border-radius: 0.3em;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+  background-color: #e8eeef;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 /* Media Queries - Mobile First*/
