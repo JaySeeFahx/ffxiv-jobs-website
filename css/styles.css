@@ -47,6 +47,53 @@ ul {
   list-style-type: none;
 }
 
+
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  opacity: .75; 
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+
+
+
+
+.tank-bg {
+  background-color: #2d3a80;
+  color: #e8eeef;
+  text-align: center;
+}
+
+.healer-bg {
+  background-color: #346624;
+  color: #e8eeef;
+  text-align: center;
+}
+
+.dps-bg {
+  background-color: #732828;
+  color: #e8eeef;
+  text-align: center;
+}
+
 /* Image Styles*/
 
 ul img {

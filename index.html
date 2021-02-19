@@ -30,31 +30,53 @@
                 <p class="sec5">These roles dictate what each job should focus on when partying with others.</p>
             </div>
             <div class="job-list">
-                <div>
+
+
+
+
+
+                <button class="accordion tank-bg">TANKS</button>
+                <div class="panel">
                     <p><strong>Tanks</strong> soak damage from enemies and protect the party with defensive abilities.</p>
-                    <ul class="tank-job-list">
+                    <ul class="tank-list">
                     </ul>
                 </div>
-                <div>
+
+
+                <button class="accordion healer-bg">HEALERS</button>
+                <div class="panel">
                     <p><strong>Healers</strong> heal, protect, and revive party members while dealing damage to enemies.</p>
-                    <ul class="healer-job-list">
+                    <ul class="healer-list">
                     </ul>
                 </div>
-                <div>
+
+
+                <button class="accordion dps-bg">MELEE</button>
+                <div class="panel">
                     <p><strong>Melee DPS</strong> deal devastating damage in close-ranged combat with fists, swords, and spears.</p>
-                    <ul class="melee-dps-list">
+                    <ul class="melee-list">
                     </ul>
                 </div>
-                <div>
+
+
+                <button class="accordion dps-bg">MAGICAL</button>
+                <div class="panel">
                     <p><strong>Magical DPS</strong> deal high damage with innate spells and abilities.</p>
-                    <ul class="magical-dps-list">
+                    <ul class="magical-list">
                     </ul>
                 </div>
-                <div>
+
+                
+                <button class="accordion dps-bg">RANGED</button>
+                <div class="panel">
                     <p><strong>Ranged DPS</strong> deal substantial damage from afar with bows, guns, and chakrams.</p>
-                    <ul class="ranged-dps-list">
+                    <ul class="ranged-list">
                     </ul>
                 </div>
+
+
+
+
             </div>
         </div>
         <div class="container">
@@ -65,7 +87,7 @@
                 <input type="text" id="name">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="email@website.com">
+                <input type="email" id="email" placeholder="email@website.com" required>
 
                 <label for="job">Which Job Will You Be?</label>
                 <select name="job" id="job" onchange="colorChange()">

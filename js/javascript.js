@@ -127,6 +127,8 @@ const ranged = [
  * This will change the button color depending on form selection
  * @select - retrieves the form element
  * @job - sets 'job' variable depending on what is selected in the dropdown
+ * @tank - sets 'tank' variable to an array of the .job values in each object of the tanks array above
+ * @healer - sets 'healer' variable to an array of the .job values in each object of the healers array above
  * @button - retrieves the 'submit' button
 */
 function colorChange() {
@@ -148,3 +150,17 @@ function colorChange() {
     }
 }
 
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
