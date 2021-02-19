@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FFXIV Jobs</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="js/javascript.js"></script>
 </head>
@@ -12,29 +13,29 @@
         <div class="container">
             <h1 class="title">FFXIV Jobs</h1>
             <p>Welcome to the World of Eorzea, Adventurer!</p>
-            <nav class="nav-bar">
+            <!-- <nav class="nav-bar">
                 <ul class="nav-list">
                     <li class="home"><a href="">Home</a></li>
                     <li class="tanks-page"><a href="">Tanks</a></li>
                     <li class="healers-page"><a href="">Healers</a></li>
                     <li class="dps-page"><a href="">DPS</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </header>
         
     <main class="main-content">
         <div class="intro">
             <h3>What is FFIXV?</h3>
-            <p>FFXIV (Final Fantasy 14) is an online MMORPG that has been growing in popularity since it's second iteration, A Realm Reborn, was introduced back in 2013. Available on consoles and PC, it is a widely enjoyed game that allows a person to become any one of 8 races to explore the world of Eorzea.</p>
-            <p>Once you've picked a race, you may then choose a starting class, of which there are 9. One of the biggest draws to many players is the ability to unlock every class/job available on only one character! The first MMORPG to offer this kind of incentive to play.</p>
-            <p>After leveling sufficiently, and getting through enough story, the world opens up and allows the player to begin picking jobs like Black Mage, or Dragoon. Each new expansion offers more story, more lands to explore, and more jobs to play.</p>
+            <p class="sec1">FFXIV (Final Fantasy 14) is an online MMORPG that has been growing in popularity since it's second iteration, A Realm Reborn, was introduced back in 2013. Available on consoles and PC, it is a widely enjoyed game that allows a person to become any one of 8 races to explore the world of Eorzea.</p>
+            <p class="sec2">Once you've picked a race, you may then choose a starting class, of which there are 9. One of the biggest draws to many players is the ability to unlock every class/job available on only one character! The first MMORPG to offer this kind of incentive to play.</p>
+            <p class="sec3">After leveling sufficiently, and getting through enough story, the world opens up and allows the player to begin picking jobs like Black Mage, or Dragoon. Each new expansion offers more story, more lands to explore, and more jobs to play.</p>
         </div>
         <br> <!--Delete Later | Shows break between content-->
-        <div class="container">
+        <div class="jobs-container">
             <div class="jobs-intro">
                 <h3>FFXIV Jobs</h3>
-                <p>Each job has a role. These roles dictate what each class should focus on when partying with others.</p>
+                <p>Each job has a role. These roles dictate what each job should focus on when partying with others.</p>
                 <p>Tanks soak damage from enemies and protect the party with defensive abilities.</p>
             </div>
             <div class="job-list">
@@ -136,8 +137,9 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="email@website.com">
 
-                <label for="job">Which Job Are You Most Interested In?</label>
+                <label for="job">Which Job Will You Be?</label>
                 <select name="job" id="job" onchange="colorChange()">
+                    <option value="select" disabled selected>Select Your Job</option>
                     <optgroup label="Tanks">
                         <option value="paladin">Paladin</option>
                         <option value="warrior">Warrior</option>
@@ -175,7 +177,7 @@
     </main>
     <footer>
         <ul class="footer-list">
-            <li>&copy;Jacob Clark, 2021</li>
+            <li>&copy;Front End Web Developer Jacob Clark, 2021</li>
         </ul>
     </footer>
 </body>
