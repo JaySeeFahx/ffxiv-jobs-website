@@ -144,23 +144,31 @@ function colorChange() {
     } else if ( healer.includes(job) ) {
         button.style.background = '#346624';
         button.style.color = '#e8eeef';
-    } else {
+    } else { 
         button.style.background = '#732828';
         button.style.color = '#e8eeef';
     }
 }
 
+
+/**
+ * This allows the job lists to accordion in order to take up less space
+ * @acc - retrieves the elements with classes that match 'accordion'
+ * @panel - references the elements with 'panel' classes
+ */
 let acc = document.getElementsByClassName("accordion");
 let i;
 
 for (i = 0; i < acc.length; i++) {
+
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     let panel = this.nextElementSibling;
+
     if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
   });
 }
