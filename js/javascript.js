@@ -175,6 +175,27 @@ function colorChange() {
     }
 }
 
+function validateEmail(inputText) {
+    let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(inputText.value.match(mailformat)) {
+        document.form1.email.focus();
+        return true;
+    } else {
+        alert("You have entered an invalid email address!");
+        document.form1.email.focus();
+        return false;
+    }
+}
 
+function empty() {
+    let empty = document.forms['form1']['name', 'email'].value;
+    if(empty === '') {
+        alert('Please fill out the empty fields!');
+        return false;
+    } else {
+        alert('Thank you for visiting!');
+        return true;
+    }
+}
 
 

@@ -12,14 +12,13 @@ body,
   font-size: 1.2em;
 }
 
-.footer-list {
+footer {
   font-size: .75em;
   padding: 0;
 }
 
 p {
   text-align: left;
-  border: 2px solid red;
 }
 
 #submit:hover {
@@ -30,7 +29,18 @@ input:not([type="submit"]) {
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.45);
 }
 
+h3,
+h4 {
+  text-shadow: 0 0 5px #dbca97;
+}
+
 /* Accordion Styles */
+
+button {
+  position: sticky;
+  top: 0;
+  margin-top: 2px;
+}
 
 .accordion {
   cursor: pointer;
@@ -39,17 +49,14 @@ input:not([type="submit"]) {
   border: none;
   outline: none;
   transition: 0.4s;
-  position: sticky;
-  top: 0;
 }
 
 .active {
-  opacity: .75; 
+  background: #e8eeef;
 }
 
 .panel {
   padding: 0 18px;
-  background-color: rgb(41, 41, 41);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -57,6 +64,21 @@ input:not([type="submit"]) {
 
 .accordion_panels {
   border: 2px solid #dbca97;
+  padding: 5px;
+  margin: 10px;
+  line-height: 1.2em;  
+}
+
+.tank-panel {
+  background: linear-gradient(90deg, #2d3a80, rgb(41, 41, 41) );
+}
+
+.healer-panel {
+  background: linear-gradient(90deg, #346624, rgb(41, 41, 41) );
+}
+
+.dps-panel {
+  background: linear-gradient(90deg, #732828, rgb(41, 41, 41) );
 }
 
 .tank-bg {
@@ -77,12 +99,13 @@ input:not([type="submit"]) {
   text-align: center;
 }
 
-/* Image Styles*/
-
-ul img {
-  width: 30px;
+div img {
+  width: 100px;
   height: auto;
 }
+
+
+/* Image Styles*/
 
 .title::before,
 .title::after {
@@ -97,7 +120,7 @@ ul img {
 /* Form Styles */
 
 .contact-form {
-  margin: 0;
+  margin: 25px 0;
   padding: 5px;
   background-color: rgb(41, 41, 41);
   border-radius: 5px;
@@ -144,7 +167,7 @@ select[name="job"] {
 @media screen and (min-width: 801px) {
 
   /* Accordion Styles */
-  .active, .accordion:hover {
+  .accordion:hover {
     opacity: .75; 
   }
 }
