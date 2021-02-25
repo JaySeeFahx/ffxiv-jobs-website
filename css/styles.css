@@ -5,7 +5,7 @@
 body,
 .main-header p {
   background: black;
-  color: white;
+  color: #e8eeef;
   padding: 0;
   margin: 10px;
   text-align: center;
@@ -30,24 +30,7 @@ input:not([type="submit"]) {
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.45);
 }
 
-/* Nav Styles */
-
-nav-bar {
-  display: flex;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-/* List Styles */
-
-ul {
-  list-style-type: none;
-}
-
-
+/* Accordion Styles */
 
 .accordion {
   cursor: pointer;
@@ -58,23 +41,21 @@ ul {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active {
   opacity: .75; 
 }
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: rgb(41, 41, 41);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
-
-
-
-
-
+.accordion_panels {
+  border: 2px solid #dbca97;
+}
 
 .tank-bg {
   background-color: #2d3a80;
@@ -159,4 +140,9 @@ select[name="job"] {
 
 /* Desktop Display */
 @media screen and (min-width: 801px) {
+
+  /* Accordion Styles */
+  .active, .accordion:hover {
+    opacity: .75; 
+  }
 }

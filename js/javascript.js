@@ -76,7 +76,7 @@ const melee = [
     {
         'job': 'TBD',
         'image': '<img src="../images/dalamud.png" alt="Dalamud Moon FFXIV Symbol">',
-        'desc': 'Little to nothing is known about this new job, other than that there is a new heavy-armered, close-ranged fighter coming to Eorzea to spread their knowledge.'
+        'desc': 'Little to nothing is known about this new job, other than that there is a new heavy-armored, close-ranged fighter coming to Eorzea to spread their knowledge.'
     }
 ]
 
@@ -152,23 +152,31 @@ function colorChange() {
 
 
 /**
- * This allows the job lists to accordion in order to take up less space
+ * This allows the job lists to accordion in order to take up less space 
  * @acc - retrieves the elements with classes that match 'accordion'
  * @panel - references the elements with 'panel' classes
  */
-let acc = document.getElementsByClassName("accordion");
+let acc = document.getElementsByClassName('accordion');
 let i;
 
 for (i = 0; i < acc.length; i++) {
 
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
+  acc[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    let panel = this.nextElementSibling; 
 
     if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.maxHeight = panel.scrollHeight + 'px';
       }
   });
+}
+
+let jobs = document.querySelector('.accordion_panels');
+let html= '';
+
+
+for (let i = 0; i < jobs.length; i++) {
+    
 }
