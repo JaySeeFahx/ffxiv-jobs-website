@@ -1,6 +1,6 @@
-/* Global Variables */
+/* Global Variables ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
-/* Tank Job Objects*/
+/* Tank Job Objects ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
 const tanks = [
     {
@@ -25,7 +25,7 @@ const tanks = [
     }
 ]
 
-/* Healer Job Objects */
+/* Healer Job Objects ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
 const healers = [
     {
@@ -50,7 +50,7 @@ const healers = [
     }
 ]
 
-/* DPS Job Objects */
+/* DPS Job Objects ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
 const melee = [
     {
@@ -121,7 +121,32 @@ const ranged = [
     }
 ]
 
-/* Functions */
+
+  /* Loops ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
+
+/**
+ * This allows the job lists to accordion in order to take up less space 
+ * @acc - retrieves the elements with classes that match 'accordion'
+ * * @panel - references the elements with 'panel' classes
+ */
+let acc = document.getElementsByClassName('accordion');
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    let panel = this.nextElementSibling; 
+
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+  });
+}
+
+
+/* Functions ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
 /**
  * This will change the button color depending on form selection
@@ -151,32 +176,5 @@ function colorChange() {
 }
 
 
-/**
- * This allows the job lists to accordion in order to take up less space 
- * @acc - retrieves the elements with classes that match 'accordion'
- * @panel - references the elements with 'panel' classes
- */
-let acc = document.getElementsByClassName('accordion');
-let i;
-
-for (i = 0; i < acc.length; i++) {
-
-  acc[i].addEventListener('click', function() {
-    this.classList.toggle('active');
-    let panel = this.nextElementSibling; 
-
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-      }
-  });
-}
-
-let jobs = document.querySelector('.accordion_panels');
-let html= '';
 
 
-for (let i = 0; i < jobs.length; i++) {
-    
-}

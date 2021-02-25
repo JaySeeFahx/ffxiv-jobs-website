@@ -39,6 +39,8 @@ input:not([type="submit"]) {
   border: none;
   outline: none;
   transition: 0.4s;
+  position: sticky;
+  top: 0;
 }
 
 .active {

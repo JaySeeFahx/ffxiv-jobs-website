@@ -34,43 +34,133 @@
 
 
 
-                <button class="accordion tank-bg">TANKS</button>
+                <button id="tanks" class="accordion tank-bg" onclick="replyClick(this.id)">TANKS</button>
                 <div class="panel">
                     <p><strong>Tanks</strong> soak damage from enemies and protect the party with defensive abilities.</p>
-                    <div class="accordion_panels" id="paladin"><p>This is a test</p></div>
-                    <div class="accordion_panels" id="warrior"><p>This is a test</p></div>
-                    <div class="accordion_panels" id="dark_knight"><p>This is a test</p></div>
-                    <div class="accordion_panels" id="gunbreaker"><p>This is a test</p></div>
+                    <div class="accordion_panels ">
+                        <h4>Paladin</h4>
+                        <img src="images/tanks/PAL.png" alt="Paladin shield job symbol">
+                        <p>These men and women marry exquisite swordplay with stalwart shieldwork to create a style of combat uncompromising in its defense. To be a paladin is to protect, and those who choose to walk this path will become the iron foundation upon which the party's defense is built.                        </p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Warrior</h4>
+                        <img src="images/tanks/WAR.png" alt="Warrior axe job symbol">
+                        <p>Wielding greataxes and known as warriors, these men and women learn to harness their inner-beasts and translate that power to unbridled savagery on the battlefield.In former times which saw war waged ceaselessly in Eorzea, the warriors featured prominently on the front lines of battle.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Dark Knight</h4>
+                        <img src="images/tanks/DRK.png" alt="Dark Knight magic job symbol">
+                        <p>A valiant few take up arms to defend the downtrodden, and not even the holy priests and knights can escape their judgment. Pariahs in their own land, they are known by many as “dark knights.” These sentinels bear no shields declaring their allegiance. Instead, their greatswords act as beacons to guide the meek through darkness.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Gunbreaker</h4>
+                        <img src="images/tanks/GNB.png" alt="Gunbreaker barrel job symbol">
+                        <p>The Hrothgar of northern Ilsabard have passed the art of the gunblade from one generation to the next. The weapon itself combines a sword with a firing mechanism, emitting a range of magical effects by utilizing aetherially imbued cartridges.</p>
+                    </div>
                 </div>
 
 
-                <button class="accordion healer-bg">HEALERS</button>
+                <button id="healers" class="accordion healer-bg">HEALERS</button>
                 <div class="panel">
                     <p><strong>Healers</strong> heal, protect, and revive party members while dealing damage to enemies.</p>
+                    <div class="accordion_panels">
+                        <h4>White Mage</h4>
+                        <img src="images/healers/WHM.png" alt="White Mage staff job symbol">
+                        <p>White magic, the arcane art of succor, was conceived eras past that the world might know comfort. Those who would walk the path of the white mage are healers without peer, possessed of the power to deliver comrades from the direst of afflictions—even the icy grip of death itself.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Scholar</h4>
+                        <img src="images/healers/SCH.png" alt="Scholar grimoire job symbol">
+                        <p>These learned men and women defended the freedom of their tiny nation with their unique command over spell-weaving faeries, utilizing the creatures' magicks to heal the wounded and bolster the strength of their allies.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Astrologian</h4>
+                        <img src="images/healers/AST.png" alt="Astrologian tarot job symbol">
+                        <p>By attuning their aetherial energies to that of constellations, they learned to wield magicks with heretofore unseen properties. Thus was astromancy born—a new form of magick which grants its users power over fate. Employing a star globe and divining deck in their miraculous deeds, fortune always smiles upon these masters of arcana.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Sage</h4>
+                        <img src="images/dalamud.png" alt="Dalamud Moon FFXIV Symbol">
+                        <p>There is little known about this new job coming to Eorzea, other than that they use barriers to protect their party members and magics to heal; however, given time, we shall know more about this mystical, Noulith-wielding healer.</p>
+                    </div>
                 </div>
 
 
-                <button class="accordion dps-bg">MELEE</button>
+                <button id="melee" class="accordion dps-bg">MELEE</button>
                 <div class="panel">
                     <p><strong>Melee DPS</strong> deal devastating damage in close-ranged combat with fists, swords, and spears.</p>
-                    <ul class="melee-list">
-                    </ul>
+                    <div class="accordion_panels">
+                        <h4>Monk</h4>
+                        <img src="images/dps/Melee DPS/MNK.png" alt="Monk angled line job symbol">
+                        <p>The monks comprised an order known as the Fist of Rhalgr, and it was to this god—the Destroyer—that they devoted their lives of worship. By mastering seats of power within the body known as chakra, they are capable of performing extraordinary physical feats.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Dragoon</h4>
+                        <img src="images/dps/Melee DPS/DRG.png" alt="Dragoon spear job symbol">
+                        <p>Born amidst the timeless conflict between men and dragons, these lance-wielding knights have developed an aerial style of combat, that they might better pierce the scaled hides of their mortal foes.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Ninja</h4>
+                        <img src="images/dps/Melee DPS/NIN.png" alt="Ninja shuriken job symbol">
+                        <p> Able to manipulate the vital energies of the land, the air, and living beings, they manifest their power through the weaving of signs, unleashing a wide array of attacks against their foes. Master the arts of the ninja and learn to bend the tide of battle to your will.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Samurai</h4>
+                        <img src="images/dps/Melee DPS/SAM.png" alt="Samurai katana hilt job symbol">
+                        <p>In the distant past, the realm's great lords vied for supremacy over its seagirt confines in a long and bloody conflict. And taking to battle in their lieges' names were noble swordsmen whose art was forged in the crucible of war: the samurai.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>TBD</h4>
+                        <img src="images/dalamud.png" alt="Dalamud Moon FFXIV Symbol">
+                        <p>Little to nothing is known about this new job, other than that there is a new heavy-armored, close-ranged fighter coming to Eorzea to spread their knowledge.</p>
+                    </div>
                 </div>
 
 
-                <button class="accordion dps-bg">MAGICAL</button>
+                <button id="magical" class="accordion dps-bg">MAGICAL</button>
                 <div class="panel">
                     <p><strong>Magical DPS</strong> deal high damage with innate spells and abilities.</p>
-                    <ul class="magical-list">
-                    </ul>
+                    <div class="accordion_panels">
+                        <h4>Black Mage</h4>
+                        <img src="images/dps/Magical DPS/BLK.png" alt="Black Mage fireball job symbol">
+                        <p>In days long past, there existed an occult and arcane art known as black magic—a potent magic of pure destructive force born forth by a sorceress of unparalleled power. Those who learned to wield this instrument of ruin came to be called black mages, out of both fear and respect for their gift.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Summoner</h4>
+                        <img src="images/dps/Magical DPS/SMN.png" alt="Summoner magic job symbol">
+                        <p>In times immemorial, there lived mages who had not only the power to summon the primals, but also the means to transmute the primals' essences, thus binding them to their will. Known simply as summoners, the existence of these men and women and their arcane art have been all but lost to the ages.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Red Mage</h4>
+                        <img src="images/dps/Magical DPS/RDM.png" alt="Red Mage saber job symbol">
+                        <p>Sworn enemies buried their history for the sake of the future, and cast aside their vestments of black and white. Upon the remnants of their arts a new discipline was built, and the first red mages stepped forward with rapiers in hand to fight back against the rising tides of destruction.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Blue Mage</h4>
+                        <img src="images/dps/Magical DPS/BLU.png" alt="Blue Mage mask job symbol">
+                        <p> So-called mage of rather questionable character claims to have mastered an outlandish form of spellcasting that resembles neither black nor white magic during his voyage to the New World. Allegedly, anyone who purchases one of his soul crystals can learn to mimic the aetherial magicks of wild creatures.</p>
+                    </div>
                 </div>
 
                 
-                <button class="accordion dps-bg">RANGED</button>
+                <button id="ranged" class="accordion dps-bg">RANGED</button>
                 <div class="panel">
                     <p><strong>Ranged DPS</strong> deal substantial damage from afar with bows, guns, and chakrams.</p>
-                    <ul class="ranged-list">
-                    </ul>
+                    <div class="accordion_panels">
+                        <h4>Bard</h4>
+                        <img src="images/dps/Ranged DPS/BRD.png" alt="Bard harp job symbol">
+                        <p>Their origins back to the bowmen of eld, who sang in the heat of battle to fortify the spirits of their companions. In time, their impassioned songs came to hold sway over the hearts of men, inspiring their comrades to great feats and granting peace unto those who lay upon the precipice of death.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Machinist</h4>
+                        <img src="images/dps/Ranged DPS/MCH.png" alt="Machinist pistol job symbol">
+                        <p>Ishgard turns to technology to protect her sons and daughters. The Skysteel Manufactory works tirelessly on the development of advanced armaments. As new and devastating weapons are brought to the fray, a new class of champion arises to wield them―the machinist.</p>
+                    </div>
+                    <div class="accordion_panels">
+                        <h4>Dancer</h4>
+                        <img src="images/dps/Ranged DPS/DNC.png" alt="Dancer heart job symbol">
+                        <p>Inured to the hardships of the road, these dancers have learned to land throwing weapons with the same exacting precision as their footfalls, removing any who would obstruct the endless beat of the dance.</p>
+                    </div>
                 </div>
 
 
