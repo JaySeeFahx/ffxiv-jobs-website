@@ -2,6 +2,11 @@
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  text-shadow: 5px 4px 2px #732828;
+}
+
 body,
 .main-header p {
   background: black;
@@ -31,7 +36,26 @@ input:not([type="submit"]) {
 
 h3,
 h4 {
-  text-shadow: 0 0 5px #dbca97;
+  text-shadow: 0 0 7px #dbca97;
+}
+
+.game-info {
+  border: 2px solid #dcba97;
+  padding: 3px 5px;
+}
+
+.sec4 {
+  text-align: center;
+  border-top: 2px solid #dcba97;
+  padding-top: 10px;
+  margin: 0;
+  font-size: 22px;
+}
+
+.sec5 {
+  text-align: center;
+  font-size: 1.15em;
+  display: inline-block;
 }
 
 /* Accordion Styles */
@@ -42,6 +66,21 @@ button {
   margin-top: 2px;
 }
 
+#tanks {
+  border-top-left-radius: .4em;
+  border-top-right-radius: .4em;
+}
+
+#ranged {
+  border-bottom-left-radius: .4em;
+  border-bottom-right-radius: .4em;
+}
+
+.active {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
 .accordion {
   cursor: pointer;
   padding: 18px;
@@ -49,10 +88,6 @@ button {
   border: none;
   outline: none;
   transition: 0.4s;
-}
-
-.active {
-  background: #e8eeef;
 }
 
 .panel {
@@ -73,18 +108,14 @@ button {
   background: linear-gradient(90deg, #2d3a80, rgb(41, 41, 41) );
 }
 
-.healer-panel {
-  background: linear-gradient(90deg, #346624, rgb(41, 41, 41) );
-}
-
-.dps-panel {
-  background: linear-gradient(90deg, #732828, rgb(41, 41, 41) );
-}
-
 .tank-bg {
   background-color: #2d3a80;
   color: #e8eeef;
   text-align: center;
+}
+
+.healer-panel {
+  background: linear-gradient(90deg, #346624, rgb(41, 41, 41) );
 }
 
 .healer-bg {
@@ -93,17 +124,15 @@ button {
   text-align: center;
 }
 
+.dps-panel {
+  background: linear-gradient(90deg, #732828, rgb(41, 41, 41) );
+}
+
 .dps-bg {
   background-color: #732828;
   color: #e8eeef;
   text-align: center;
 }
-
-div img {
-  width: 100px;
-  height: auto;
-}
-
 
 /* Image Styles*/
 
@@ -117,13 +146,25 @@ div img {
   background: url(../images/dalamud.png) no-repeat 0 0;
   background-size: 100%;
 }
+
+div img {
+  width: 100px;
+  height: auto;
+}
+
 /* Form Styles */
 
 .contact-form {
   margin: 25px 0;
-  padding: 5px;
+  padding-bottom: 10px;
   background-color: rgb(41, 41, 41);
   border-radius: 5px;
+}
+
+form h3 {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 2px solid #dbca97;
 }
 
 input,
@@ -137,18 +178,8 @@ select {
   padding: 10px;
   margin-bottom:.25em;
   outline: 0;
-  border-radius: 0.3em;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.4em;
   background-color: #e8eeef;
-}
-
-label {
-  display: block;
-  margin: 0.5em 0;
-}
-
-input[type="submit"] {
-  margin-top: 2em;
 }
 
 input[type="submit"],
@@ -157,14 +188,73 @@ select[name="job"] {
   background-color: #e8eeef;
 }
 
+input[type="submit"] {
+  margin-top: 2em;
+}
+
+label {
+  display: block;
+  margin: 0.5em 0;
+}
+
+
 /* Media Queries - Mobile First*/
 
 /* Tablet Display */
-@media screen and (min-width: 401px) and (max-width: 800px) {
+@media screen and (min-width: 401px) and (max-width: 900px) {
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sec1 {
+    box-shadow: 0 -8px 10px #dcba97;
+    width: 87%;
+    font-size: 1.1em;
+  }
+
+  .sec2 {
+    box-shadow: -10px 8px 10px #dcba97; 
+    width: 40%;
+  }
+
+  .sec3{
+    box-shadow: 10px 8px 10px #dcba97; 
+    width: 40%;
+  }
+
+  .game-info {
+    margin: 10px;
+  }
+
+  .jobs-container {
+    flex-basis: 70%;
+    margin: 25px 0;
+  }
+
+  .form-container {
+    flex-basis: 70%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .break {
+    width: 0;
+    flex-basis: 100%;
+  }
 }
 
+
+
 /* Desktop Display */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 901px) {
+
+  .container {
+    display: flex;
+  }
+
 
   /* Accordion Styles */
   .accordion:hover {

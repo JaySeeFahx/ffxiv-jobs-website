@@ -187,15 +187,4 @@ function validateEmail(inputText) {
     }
 }
 
-function empty() {
-    let empty = document.forms['form1']['name', 'email'].value;
-    if(empty === '') {
-        alert('Please fill out the empty fields!');
-        return false;
-    } else {
-        alert('Thank you for visiting!');
-        return true;
-    }
-}
-
 
