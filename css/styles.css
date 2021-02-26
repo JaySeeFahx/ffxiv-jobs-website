@@ -238,6 +238,7 @@ label {
     flex-basis: 70%;
     margin: 0;
     padding: 0;
+    position: static;
   }
 
   .break {
@@ -253,8 +254,49 @@ label {
 
   .container {
     display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
+  .game-info {
+    text-align: center;
+  }
+
+  .sec1 {
+    box-shadow: 0 8px 10px #dcba97;
+    flex-basis: 80%;
+    font-size: 1.5em;
+    order: 1;
+    margin: 0 10px;
+  }
+
+  .sec2 {
+    box-shadow: -10px 8px 10px #dcba97; 
+    flex-basis: 40%;
+    order: -1;
+  }
+
+  .sec3{
+    box-shadow: 10px 8px 10px #dcba97; 
+    flex-basis: 40%;
+    order: 2;
+  }
+
+  .jobs-container {
+    flex-basis: 45%;
+
+  }
+
+  .form-container {
+    flex-basis: 45%;
+  }
+
+  footer {
+    width: 100%;
+    position: absolute;
+    padding-bottom: 10px;
+  }
 
   /* Accordion Styles */
   .accordion:hover {
