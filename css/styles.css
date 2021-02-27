@@ -3,8 +3,9 @@
   box-sizing: border-box;
 }
 
-h1 {
-  text-shadow: 5px 4px 2px #732828;
+h1,
+.welcome {
+  text-shadow: 5px 4px 3px #9b2d2d;
 }
 
 body,
@@ -39,6 +40,10 @@ h4 {
   text-shadow: 0 0 7px #dbca97;
 }
 
+.ffxiv-intro {
+  margin-bottom: 1em;
+}
+
 .game-info {
   border: 2px solid #dcba97;
   padding: 3px 5px;
@@ -46,16 +51,15 @@ h4 {
 
 .sec4 {
   text-align: center;
-  border-top: 2px solid #dcba97;
   padding-top: 10px;
   margin: 0;
   font-size: 22px;
+  border-top: 2px solid #dcba97;
 }
 
 .sec5 {
   text-align: center;
   font-size: 1.15em;
-  display: inline-block;
 }
 
 /* Accordion Styles */
@@ -164,7 +168,6 @@ div img {
 form h3 {
   margin: 10px 0;
   padding: 10px;
-  border-bottom: 2px solid #dbca97;
 }
 
 input,
@@ -197,6 +200,23 @@ label {
   margin: 0.5em 0;
 }
 
+/* Video Styles  */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 5px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* Media Queries - Mobile First*/
 
@@ -225,8 +245,18 @@ label {
     width: 40%;
   }
 
+  .jobs-intro {
+    flex-direction: column;
+  }
+
   .game-info {
     margin: 10px;
+  }
+
+  .sec5 {
+    box-shadow: 0 8px 10px #dcba97;
+    font-size: 1.1em;
+    margin: 1em 10%;
   }
 
   .jobs-container {
@@ -240,14 +270,7 @@ label {
     padding: 0;
     position: static;
   }
-
-  .break {
-    width: 0;
-    flex-basis: 100%;
-  }
 }
-
-
 
 /* Desktop Display */
 @media screen and (min-width: 901px) {
@@ -283,13 +306,38 @@ label {
     order: 2;
   }
 
+  .sec5 {
+    box-shadow: 0 8px 10px #dcba97;
+    font-size: 1.1em;
+    margin: 1em 10%;
+  }
+
   .jobs-container {
     flex-basis: 45%;
+    margin-top: 25px;
 
   }
 
   .form-container {
     flex-basis: 45%;
+  }
+  
+  input,
+  select {
+    font-size: 1em;
+    color: black;
+    width: 90%;
+    border: none;
+    height: auto;
+    padding: 5px;
+    margin-bottom:.25em;
+    outline: 0;
+    border-radius: 0.4em;
+    background-color: #e8eeef;
+  }
+
+  .interactive {
+    align-items: flex-start;
   }
 
   footer {
