@@ -180,7 +180,6 @@ function colorChange() {
  * @mailFormat is equal to all the valid characters for an email address
  * the IF statement checks if the input value for the email matches any of the @mailFormat characters
  */
-
 let validateEmail = (inputText) => {
     const mailformat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(inputText.value.match(mailformat)) {
@@ -199,7 +198,6 @@ let validateEmail = (inputText) => {
  *      if it's empty, the function stops running
  *      if they've been filled out, it lifts the 'disabled' attribute 
  */
-
  function isRequired() {
     let empt1 = document.getElementById('name').value;
     let empt2 = document.getElementById('email').value;
@@ -213,16 +211,14 @@ let validateEmail = (inputText) => {
 
 /**
  * This function replaces the page with a personalized thank you note
- * @valid takes the value of the validateEmail() function and stores it
  * @formEmail takes the value of the HTML email field
- * @job takes the value of the selected job in the form's dropdown menu
+ * @formJob takes the value of the selected job in the form's dropdown menu
  * @formName takes the value of the HTML name field
  * @message is set to the personalized message
  * the IF statement checks whether or not @valid is true or not;
  *      if true the function will display the message
  *      if false the function stops
  */
-
 function thankYou() {
     let formEmail = document.getElementById('email').value;
     let formJob = select.options[select.selectedIndex].text;
@@ -235,10 +231,5 @@ function thankYou() {
     </div>
     `;
     
-    if ( valid === false ) {
-        return;
-    } else {
-        document.querySelector('main').innerHTML = message;
-        return;
-    }
+    document.querySelector('main').innerHTML = message;
 }
