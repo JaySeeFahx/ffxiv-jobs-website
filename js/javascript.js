@@ -149,26 +149,6 @@ for (i = 0; i < acc.length; i++) {
 /* Functions ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
 /**
- * This function will lif tthe 'disabled' attribute on the 'Submit' button if the fields are filled out
- * @empt1 is set to the value of the name field
- * @empt2 is set to the value of the email field
- * the IF statemen compares if either @empt1 or @empt2 is set to a value of an empty string
- *      if it's empty, the function stops running
- *      if they've been filled out, it lifts the 'disabled' attribute 
- */
-function isRequired() {
-    let empt1 = document.forms['form1']['name'].value;
-    let empt2 = document.forms['form1']['email'].value;
-
-    if ( empt1 || empt2 === '' ) {
-        return;
-    } else {
-        document.getElementById('submit').removeAttribute('disabled');
-    }
-
-}
-
-/**
  * This will change the button color depending on form selection
  * @select - retrieves the form element
  * @job - sets 'job' variable depending on what is selected in the dropdown
@@ -201,13 +181,33 @@ function colorChange() {
  * the IF statement checks if the input value for the email matches any of the @mailFormat characters
  */
 
-function validateEmail(inputText) {
-    let mailformat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let validateEmail = (inputText) => {
+    const mailformat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(inputText.value.match(mailformat)) {
         return true;
     } else {
         alert('You have entered an invalid email!');
         return false;
+    }
+}
+
+/**
+ * This function will lift the 'disabled' attribute on the 'Submit' button if the fields are filled out
+ * @empt1 is set to the value of the name field
+ * @empt2 is set to the value of the email field
+ * the IF statemen compares if either @empt1 or @empt2 is set to a value of an empty string
+ *      if it's empty, the function stops running
+ *      if they've been filled out, it lifts the 'disabled' attribute 
+ */
+
+ function isRequired() {
+    let empt1 = document.getElementById('name').value;
+    let empt2 = document.getElementById('email').value;
+
+    if (( empt1 === '' ) || ( empt2 === '' )) {
+        return;
+    } else {
+        document.getElementById('submit').disabled = false;
     }
 }
 
@@ -224,13 +224,12 @@ function validateEmail(inputText) {
  */
 
 function thankYou() {
-    let valid = validateEmail();
     let formEmail = document.getElementById('email').value;
     let formJob = select.options[select.selectedIndex].text;
     let formName = document.getElementById('name').value;
-    let message = `
+    const message = `
     <div class="thank-you-msg">
-        <h1>Thank you for visiting <strong>${formName}</strong>!</h1>
+        <h1>Thank you for visiting, <strong>${formName}</strong>!</h1>
         <p>If we need to reach you, we will send an inquiry to: '<strong>${formEmail}</strong>'.</p>
         <h3>We hope you have fun adventuring in Eorzea as a <strong>${formJob}</strong>!</h3>
     </div>
