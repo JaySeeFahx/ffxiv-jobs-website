@@ -121,6 +121,7 @@ const ranged = [
     }
 ]
 
+let select = document.getElementById('job');
 
   /* Loops ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~ */
 
@@ -157,7 +158,7 @@ for (i = 0; i < acc.length; i++) {
  * @button - retrieves the 'submit' button
 */
 function colorChange() {
-    let select = document.getElementById('job');
+    
     let job = select.options[select.selectedIndex].text;
     let tank = tanks.map(t => t.job);
     let healer = healers.map(h => h.job);
@@ -230,6 +231,6 @@ function thankYou() {
         <h3>We hope you have fun adventuring in Eorzea as a <strong>${formJob}</strong>!</h3>
     </div>
     `;
-    
-    document.querySelector('main').innerHTML = message;
+
+    document.querySelector('body').innerHTML = message;
 }

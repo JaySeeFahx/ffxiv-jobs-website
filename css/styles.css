@@ -242,6 +242,20 @@ label {
   height: 100%;
 }
 
+/* Thank You Message Styles */
+
+.thank-you-msg p {
+  text-align: center;
+}
+
+.thank-you-msg h1,
+.thank-you-msg h3 {
+  text-shadow: none;
+}
+
+.thank-you-msg strong {
+  border-bottom: 3px solid #dbca97;
+}
 
 /* Media Queries - Mobile First*/
 
